@@ -18,9 +18,9 @@ body {
   top: 100px;
   align-items: center;
   flex-direction: column;
+  color: #2a2a2a;
 }
 * {
-  color: #2a2a2a;
   font-family: 'Inter', sans-serif;
 }
 .header-wrapper h1 {
@@ -57,8 +57,6 @@ ion-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.contact a {
   width: 190px;
   height: 60px;
   border-radius: 5%;
@@ -146,4 +144,7 @@ ion-icon {
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
+}
+.bio h3 {
+  color: #2a2a2a;
 }
