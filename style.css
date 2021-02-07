@@ -195,3 +195,7 @@ ion-icon {
     margin-right: 25px;
   }
 }
+.mail {
+  cursor: default;
+  pointer-events: none;
+}
