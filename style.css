@@ -106,15 +106,15 @@ ion-icon {
   margin-right: 50px;
 }
 .project-wrapper img {
-  width: 300px;
+  width: 330px;
   height: auto;
   align-self: center;
-  border-radius: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .project-wrapper a {
   align-self: center;
   margin-bottom: 40px;
-  margin-top: 15px;
 }
 .card {
   display: flex;
