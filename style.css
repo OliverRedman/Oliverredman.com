@@ -106,7 +106,7 @@ ion-icon {
   margin-right: 50px;
 }
 .project-wrapper img {
-  width: 330px;
+  width: 310px;
   height: auto;
   align-self: center;
   border-top-left-radius: 10px;
@@ -119,7 +119,7 @@ ion-icon {
 .card {
   display: flex;
   background-color: rgb(24, 24, 24);
-  width: 330px;
+  width: 310px;
   height: 430px;
   flex-direction: column;
   border-radius: 11px;
@@ -167,21 +167,18 @@ ion-icon {
   .bio h3 {
     font-size: 2.8rem;
   }
-  /* .arrow {
-    margin-top: 9rem;
-    margin-bottom: 24rem;
-  } */
+
   .card {
     display: flex;
     background-color: rgb(24, 24, 24);
-    width: 380px;
+    width: 360px;
     height: 480px;
     flex-direction: column;
     border-radius: 12px;
     margin: 15px 15px;
   }
   .project-wrapper img {
-    width: 380px;
+    width: 360px;
     height: auto;
     align-self: center;
     border-top-left-radius: 10px;
