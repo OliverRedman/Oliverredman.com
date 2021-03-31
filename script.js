@@ -3,7 +3,6 @@
 const bio = document.querySelector('.bio-wrapper');
 const arrow = document.querySelector('.arrow');
 
-arrow.addEventListener('click', function () {});
 
 const buttonScrollTo = document.querySelector('.arrow');
 const section1 = document.querySelector('#section--1');
