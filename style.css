@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  outline: none;
 }
 a {
   color: inherit;
@@ -21,7 +22,7 @@ body {
   color: #2a2a2a;
 }
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 .header-wrapper h1 {
   font-size: 3rem;
@@ -49,7 +50,7 @@ body {
   display: flex;
   margin-top: 2em;
 }
-ion-icon {
+.contact ion-icon {
   font-size: 150%;
   margin-right: 5px;
 }
@@ -74,7 +75,7 @@ ion-icon {
   margin-bottom: 13rem;
 }
 .arrow:hover {
-  opacity: 0.9;
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -112,11 +113,12 @@ ion-icon {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.project-wrapper a {
-  align-self: center;
-  margin-bottom: 40px;
+
+.card p {
+  margin-top: 25px;
 }
 .card {
+  position: relative;
   display: flex;
   background-color: rgb(24, 24, 24);
   width: 310px;
@@ -140,7 +142,7 @@ ion-icon {
 
 .githubto:hover,
 .mailto:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .section--hidden {
   opacity: 0;
@@ -149,6 +151,31 @@ ion-icon {
 .bio h3 {
   color: #2a2a2a;
 }
+.mail {
+  cursor: default;
+  pointer-events: none;
+}
+.git-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(24, 24, 24);
+  border-radius: 20px;
+  top: 155px;
+  align-self: center;
+  transition: all 0.2s;
+}
+.git-item ion-icon {
+  font-size: 34px;
+  color: rgb(255, 255, 255);
+}
+.git-item:hover {
+  transform: scale(1.1);
+}
+
 @media screen and (min-width: 1400px) {
   .header-wrapper h1 {
     font-size: 3.5rem;
@@ -192,8 +219,4 @@ ion-icon {
     margin-left: 25px;
     margin-right: 25px;
   }
-}
-.mail {
-  cursor: default;
-  pointer-events: none;
 }

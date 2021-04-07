@@ -1,15 +1,14 @@
-'use stict';
+"use stict";
 ////////////
-const bio = document.querySelector('.bio-wrapper');
-const arrow = document.querySelector('.arrow');
+const bio = document.querySelector(".bio-wrapper");
+const arrow = document.querySelector(".arrow");
 
-
-const buttonScrollTo = document.querySelector('.arrow');
-const section1 = document.querySelector('#section--1');
+const buttonScrollTo = document.querySelector(".arrow");
+const section1 = document.querySelector("#section--1");
 console.log();
 /////// scroll
-buttonScrollTo.addEventListener('click', function (e) {
-  section1.scrollIntoView({ behavior: 'smooth' });
+buttonScrollTo.addEventListener("click", function (e) {
+  section1.scrollIntoView({ behavior: "smooth" });
 });
 
 //////// reveal section
@@ -17,7 +16,7 @@ const revealSection = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
-  entry.target.classList.remove('section--hidden');
+  entry.target.classList.remove("section--hidden");
   observer.unobserve(entry.target);
 };
 
