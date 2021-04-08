@@ -94,6 +94,16 @@ body {
   font-size: 2.5rem;
   font-weight: 400;
 }
+.bio h3:after {
+  display: block;
+  border-radius: 5px;
+  height: 0.2rem;
+  background-color: #ebebeb;
+  content: "";
+  width: 7rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
 .bio p {
   font-size: 1rem;
 }
@@ -184,7 +194,7 @@ body {
 }
 #lamp-anim {
   width: 100%;
-  height: 875px;
+  height: 890px;
   z-index: -5;
   position: absolute;
   opacity: 0.9;
