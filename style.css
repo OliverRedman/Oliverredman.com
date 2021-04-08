@@ -227,18 +227,14 @@ body {
   }
 
   .card {
-    display: flex;
-    background-color: rgb(24, 24, 24);
     width: 360px;
     height: 480px;
-    flex-direction: column;
     border-radius: 12px;
     margin: 15px 15px;
   }
   .project-wrapper img {
     width: 360px;
     height: auto;
-    align-self: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -249,5 +245,8 @@ body {
     font-size: 1.2rem;
     margin-left: 25px;
     margin-right: 25px;
+  }
+  .git-item {
+    top: 183px;
   }
 }
