@@ -2,11 +2,12 @@
 ////////////
 const bio = document.querySelector(".bio-wrapper");
 const arrow = document.querySelector(".arrow");
+const card = document.querySelectorAll(".card");
 
 const buttonScrollTo = document.querySelector(".arrow");
 const section1 = document.querySelector("#section--1");
 console.log();
-/////// scroll
+/////// scrolls
 buttonScrollTo.addEventListener("click", function (e) {
   section1.scrollIntoView({ behavior: "smooth" });
 });
@@ -16,16 +17,19 @@ const revealSection = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
-  entry.target.classList.remove("section--hidden");
+  card.forEach((element) => {
+    element.classList.add("anim");
+  });
   observer.unobserve(entry.target);
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.1,
+  threshold: 0.15,
 });
 sectionObserver.observe(bio);
 
+/// lava stuff
 window.lavaAnimation = (function () {
   var t,
     i = {

@@ -5,6 +5,9 @@
   text-decoration: none;
   outline: none;
 }
+:root {
+  --stagger-delay: 200ms;
+}
 a {
   color: inherit;
 }
@@ -74,7 +77,6 @@ body {
   height: auto;
   margin-top: 7em;
   fill: #ebebeb;
-  transition: opacity 0.3s;
   margin-bottom: 13rem;
   transition: all 0.2s;
 }
@@ -87,7 +89,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: opacity 0.5s;
 }
 
 .bio h3 {
@@ -136,6 +137,8 @@ body {
   flex-direction: column;
   border-radius: 11px;
   margin: 10px 10px;
+  opacity: 0;
+  transition: all 1s;
 }
 .project-wrapper p {
   text-align: center;
@@ -161,10 +164,7 @@ body {
   opacity: 0.8;
   transform: scale(1.1);
 }
-.section--hidden {
-  opacity: 0;
-  transform: translateY(8rem);
-}
+
 .bio h3 {
   color: #ebebeb;
 }
@@ -217,6 +217,45 @@ body {
   fill: #ebebeb;
 }
 
+.anim {
+  animation: cardEntry 1000ms ease-out;
+  animation-fill-mode: forwards;
+}
+.card:nth-child(1) {
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+.card:nth-child(2) {
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+.card:nth-child(3) {
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+.card:nth-child(4) {
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+.card:nth-child(5) {
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+.card:nth-child(6) {
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+.card:nth-child(7) {
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+.card:nth-child(8) {
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+@keyframes cardEntry {
+  from {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
 @media screen and (min-width: 1400px) {
   .header-wrapper h1 {
     font-size: 3.5rem;
