@@ -1,31 +1,4 @@
-"use stict";
-////////////
-const bio = document.querySelector(".bio-wrapper");
-const arrow = document.querySelector(".arrow");
-
-const buttonScrollTo = document.querySelector(".arrow");
-const section1 = document.querySelector("#section--1");
-console.log();
-/////// scroll
-buttonScrollTo.addEventListener("click", function (e) {
-  section1.scrollIntoView({ behavior: "smooth" });
-});
-
-//////// reveal section
-const revealSection = function (entries, observer) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-  entry.target.classList.remove("section--hidden");
-  observer.unobserve(entry.target);
-};
-
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.1,
-});
-sectionObserver.observe(bio);
-
+'use stict';
 window.lavaAnimation = (function () {
   var t,
     i = {
@@ -41,10 +14,10 @@ window.lavaAnimation = (function () {
           return (
             (this.elem = document.getElementById(t)),
             (this.callback = i || null),
-            "CANVAS" == this.elem.tagName &&
-              (this.ctx = this.elem.getContext("2d")),
+            'CANVAS' == this.elem.tagName &&
+              (this.ctx = this.elem.getContext('2d')),
             window.addEventListener(
-              "resize",
+              'resize',
               function () {
                 this.resize();
               }.bind(this),
@@ -130,26 +103,7 @@ window.lavaAnimation = (function () {
       (this.ply = [0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1]),
       (this.mscases = [0, 3, 0, 3, 1, 3, 0, 3, 2, 2, 0, 2, 1, 1, 0]),
       (this.ix = [
-        1,
-        0,
-        -1,
-        0,
-        0,
-        1,
-        0,
-        -1,
-        -1,
-        0,
-        1,
-        0,
-        0,
-        1,
-        1,
-        0,
-        0,
-        0,
-        1,
-        1,
+        1, 0, -1, 0, 0, 1, 0, -1, -1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1,
       ]),
       (this.grid = []),
       (this.balls = []),
@@ -261,19 +215,19 @@ window.lavaAnimation = (function () {
     var r = o.createRadialGradient(t / 1, i / 1, 0, t / 1, i / 1, s);
     return r.addColorStop(0, h), r.addColorStop(1, e), r;
   };
-  if (document.getElementById("lamp-anim")) {
+  if (document.getElementById('lamp-anim')) {
     var n = function () {
         requestAnimationFrame(n),
           o.clearRect(0, 0, a.width, a.height),
           t.renderMetaballs();
       },
-      a = i.screen.init("lamp-anim", null, !0),
+      a = i.screen.init('lamp-anim', null, !0),
       o = a.ctx;
-    a.resize(), (t = new e(a.width, a.height, 6, "#3494E6", "#EC6EAD"));
+    a.resize(), (t = new e(a.width, a.height, 6, '#3494E6', '#EC6EAD'));
   }
   return { run: n };
 })();
 
-if (document.getElementById("lamp-anim")) {
+if (document.getElementById('lamp-anim')) {
   lavaAnimation.run();
 }
