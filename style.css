@@ -230,8 +230,8 @@ body {
   font-size: 20px;
   color: #ebebeb;
 }
-.cv svg {
-  margin-right: 5px;
+svg {
+  margin-right: 10px;
   fill: #ebebeb;
 }
 
